@@ -142,7 +142,7 @@
 		$(window).bind( 'hashchange', navigateToHashPath);
 
 		function navigateToHashPath() {
-			$(".intro-header").hide();
+			$(".site-heading").hide();
 		    if (window.location.hash != "" && window.location.hash.indexOf("#/") >= 0) {
 				var path = window.location.hash.replace("#/", "").split('/');
 				
@@ -156,7 +156,7 @@
 		    }
 		    else {
 				$("#content").load("/pages/home.html");
-				$(".intro-header").show();
+				$(".site-heading").show();
 		    }
 		}
 	</script>
