@@ -142,18 +142,21 @@
 		$(window).bind( 'hashchange', navigateToHashPath);
 
 		function navigateToHashPath() {
+			$("intro-header").hide();
 		    if (window.location.hash != "" && window.location.hash.indexOf("#/") >= 0) {
-			var path = window.location.hash.replace("#/", "").split('/');
-			$("#content").load("/pages/" + path[0] + ".html", function (response, status, xhr) {
-			    if (status == "error") {
-				if (xhr.status == 404) {
-				    $("#content").load("404.html");
-				}
-			    }
-			});
+				var path = window.location.hash.replace("#/", "").split('/');
+				
+				$("#content").load("/pages/" + path[0] + ".html", function (response, status, xhr) {
+					if (status == "error") {
+						if (xhr.status == 404) {
+							$("#content").load("404.html");
+						}
+					}
+				});
 		    }
 		    else {
-			$("#content").load("/pages/home.html");
+				$("#content").load("/pages/home.html");
+				$("intro-header").show();
 		    }
 		}
 	</script>
