@@ -1,14 +1,18 @@
 ﻿<div class="col-xs-12">
       <h1>Home</h1>
       <form action="https://www.coinpayments.net/index.php" method="post">
-            <input type="hidden" name="cmd" value="_pay_simple">
+            <input type="hidden" name="cmd" value="_pay">
             <input type="hidden" name="reset" value="1">
             <input type="hidden" name="merchant" value="a3a279ee9854b27f8a39c1dde8768289">
             <input type="hidden" name="item_name" value="1000 HEX TOKENS">
-            <input type="hidden" name="currency" value="USD">
+            <input type="hidden" name="currency" value="CAD">
             <input type="hidden" name="amountf" value="1.00000000">
+            <input type="hidden" name="quantity" value="1">
+            <input type="hidden" name="allow_quantity" value="1">
             <input type="hidden" name="want_shipping" value="0">
             <input type="hidden" name="ipn_url" value="https://requestb.in/tc7dnstc">
-            <input type="image" src="https://www.coinpayments.net/images/pub/buynow-small-white.png" alt="Buy Now with CoinPayments.net">
-      </form>
+            <input type="hidden" name="allow_extra" value="0">
+            <input type="text" name="custom" placeholder="Ether Address" />
+            <input type="image" src="https://www.coinpayments.net/images/pub/CP-main-medium.png" alt="Buy Now with CoinPayments.net">
+      </form>      
 </div>
